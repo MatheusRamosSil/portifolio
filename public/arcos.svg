@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+  <!-- Arco Externo (Verde Neon) -->
+  <circle 
+    cx="720" 
+    cy="850" 
+    r="750" 
+    fill="none" 
+    stroke="#D9FF4F" 
+    stroke-width="8" 
+    opacity="0.9"
+  />
+  
+  <!-- Arco Interno (Laranja Coral) -->
+  <circle 
+    cx="720" 
+    cy="850" 
+    r="680" 
+    fill="none" 
+    stroke="#FF8C69" 
+    stroke-width="8" 
+    opacity="0.9"
+  />
+</svg>
