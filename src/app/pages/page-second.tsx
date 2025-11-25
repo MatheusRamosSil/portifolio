@@ -1,9 +1,5 @@
+import { SquareComponente } from "../components/square";
 import Image from "next/image";
-
-interface SquareComponenteProps {
-  text: string;
-  icon: string;
-}
 
 export const PageSecond = () => {
     return (
@@ -20,14 +16,22 @@ export const PageSecond = () => {
                 src="/wave.svg"
                 alt="Descrição do SVG"
             />
-            <SquareComponente text={"Front-end Development"} icon={"/images/front.png"} />
+           <SquareComponente 
+                text={"Front-end Development"} 
+                icon={"/images/front.png"} 
+               tags={[
+                    { name: "Next.js", iconPath: "/icons/nextjs.png" }, // <--- Novo formato
+                    { name: "HTML", iconPath: "/icons/html.svg" },
+                    { name: "CSS", iconPath: "/icons/css.svg" } // <--- Novo formato
+                ]}
+            />
           <div className="
                 relative 
                 w-[calc(100%+2rem)] -mx-4 h-40 
                 -my-16 
-                z-0                  /* Z-0 garante que fica ABAIXO do card (que será z-30) */
+                z-0                  
                 md:hidden 
-                opacity-50           /* Opacidade ajustada para efeito suave */
+                opacity-50           
                 pointer-events-none
             ">
                 <Image 
@@ -37,7 +41,14 @@ export const PageSecond = () => {
                     className="object-cover rotate-180"
                 />
             </div>
-            <SquareComponente text={"Back-end Development"} icon={"/images/back.png"} />
+            <SquareComponente 
+                text={"Back-end Development"} 
+                icon={"/images/back.png"} 
+                 tags={[
+                    { name: "Java", iconPath: "/icons/java.svg" }, // <--- Novo formato
+                    { name: "Python", iconPath: "/icons/python.svg" } // <--- Novo formato
+                ]}
+            />
           <div className="
                 relative 
                 w-[calc(100%+2rem)] -mx-4 h-40 
@@ -54,36 +65,15 @@ export const PageSecond = () => {
                     className="object-cover"
                 />
             </div>
-            <SquareComponente text={"Mobile Development"} icon={"/images/mobile.png"} />
+            <SquareComponente 
+                text={"Mobile Development"} 
+                icon={"/images/mobile.png"} 
+                 tags={[
+                    { name: "Kotlin", iconPath: "/icons/kotlin.svg" }, // <--- Novo formato
+                    { name: "React Native", iconPath: "/icons/react.svg" } // <--- Novo formato
+                ]}
+            />
         </div>
     );
 }
 
-const SquareComponente = ({ text, icon }: SquareComponenteProps) => {
-  return (
-    <div className="
-      /* 1. Tamanho */
-      w-full max-w-sm md:w-80 h-96
-
-      /* 2. O Segredo do Efeito 
-      bg-black/20               /* Fundo preto com APENAS 20% de opacidade (bem transparente) */
-      backdrop-blur-md          /* Aplica o desfoque na linha amarela que passa por trás */
-      border border-white/10    /* Borda fina e quase transparente para delimitar o card */
-      
-      /* 3. Layout e Interação */
-      flex flex-col justify-end items-start px-8 relative rounded-3xl 
-      
-    ">
-      <Image
-        src={icon}
-        alt="Descrição da imagem"
-        width={40}
-        height={40}
-        className="absolute top-10 left-8"
-      />
-      <div className="text-white font-mbgrotesk text-3xl mb-12 w-full text-left">
-        {text}
-      </div>
-    </div>
-  );
-};

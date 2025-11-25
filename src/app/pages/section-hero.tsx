@@ -69,7 +69,7 @@ export const TextBanner = () => {
       </div>
 
       {/* Detalhes e Botão */}
-      <div className="text-gray-300 font-mbgrotesk text-sm sm:text-xl py-3 md:py-4">
+      <div className="text-gray-300 font-mbgrotesk text-sm bg-background sm:text-xl py-3 md:py-4">
         <p>Sou desenvolvedor full stack e mobile há 5 anos</p>
         <p>
           Moro em{" "}

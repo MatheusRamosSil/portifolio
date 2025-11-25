@@ -2,7 +2,7 @@ import React from "react";
 
 export const EndPage = () => {
    return (
-    <div className="relative w-full md:h-[800px] h-[500px] overflow-hidden bg-black flex items-end justify-center">
+    <div className="relative w-full md:h-[600px] h-[500px] overflow-hidden bg-black flex items-end justify-center">
 
       {/* Camada do SVG */}
       <div className="absolute inset-0 w-full h-full z-0">
@@ -42,8 +42,16 @@ export const EndPage = () => {
         <p className="text-white text-lg md:text-xl font-mbgrotesk">
           By <span className="font-bold">Matheus Ramos</span>
         </p>
-        <p className="text-gray-400 text-sm md:text-base mt-2 font-mbgrotesk">
-          Inspired by <span className="text-white font-bold">Jayanta Biswas</span>
+     <p className="text-gray-400 text-sm md:text-base mt-2 font-mbgrotesk">
+          Inspired by{" "}
+          <a 
+            href="https://www.behance.net/gallery/181411305/Portfolio-Website-Design"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-bold hover:underline transition-all hover:text-yellow-400"
+          >
+            Portfolio Website Design
+          </a>
         </p>
       </div>
     </div>
